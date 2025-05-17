@@ -1,5 +1,5 @@
 const pool = require('./db');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 async function initDb() {
   if (process.env.NODE_ENV !== 'development') {

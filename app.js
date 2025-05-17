@@ -76,7 +76,10 @@ app.get('/protected', passport.authenticate('jwt', { session: false }), (req, re
 
 // Start App
 initDb().then(() => {
-  app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+  app.listen(3000, () =>{ 
+    console.log('Server running on http://localhost:3000')
+    console.log('🌍 Current NODE_ENV:', process.env.NODE_ENV);
+  });
 });
 // This code sets up an Express server with user registration and authentication using Passport.js.
 // It uses JWT for token-based authentication and bcrypt for password hashing.
